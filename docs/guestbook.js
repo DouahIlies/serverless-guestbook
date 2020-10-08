@@ -1,13 +1,13 @@
 /**
  * Web application
  */
-const apiUrl = 'https://CHANGEME.us-south.apigw.appdomain.cloud/guestbook';
+const apiUrl = 'https://douahilies.github.io/serverless-guestbook/';
 const guestbook = {
   // retrieve the existing guestbook entries
   get() {
     return $.ajax({
       type: 'GET',
-      url: `${https://22e6438b.us-south.apigw.appdomain.cloud/guestbook}/entries`,
+      url: `${apiUrl}/entries`,
       dataType: 'json'
     });
   },
@@ -16,7 +16,7 @@ const guestbook = {
     console.log('Sending', name, email, comment)
     return $.ajax({
       type: 'PUT',
-      url: `${https://22e6438b.us-south.apigw.appdomain.cloud/guestbook}/entries`,
+      url: `${apiUrl}/entries`,
       contentType: 'application/json; charset=utf-8',
       data: JSON.stringify({
         name,
